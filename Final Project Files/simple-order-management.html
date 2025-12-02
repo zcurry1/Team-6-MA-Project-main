@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management</title>
+    <link rel="stylesheet" href="universal-styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>KSUS Store Orders</h1>
+
+        <!-- Dashboard Metrics Container -->
+        <div class="dashboard-container">
+            <div class="dashboard-section">
+                <h2>Average Daily Revenue (30 days): <span id="totalRevenue">Loading...</span></h2>
+    
+            </div>
+
+            <div class="dashboard-section">
+                <h2>Average Revenue per Customer (30 days): <span id="customerSpending">Loading...</span></h2>
+            </div>
+        </div>
+
+<!-- Controls Section -->
+<div class="controls-section">
+    <div class="controls">
+        <input type="text" id="filterInput" placeholder="Search by ID or Customer">
+        <select id="statusFilter">
+            <option value="all">All Statuses</option>
+            <option value="Settled">Settled</option>
+            <option value="Authorized">Authorized</option>
+        </select>
+        <select id="sortSelect">
+            <option value="dateDesc">Date: Newest First</option>
+            <option value="dateAsc">Date: Oldest First</option>
+            <option value="amountDesc">Amount: High → Low</option>
+            <option value="amountAsc">Amount: Low → High</option>
+            <option value="customerAsc">Customer: A → Z</option>
+            <option value="customerDesc">Customer: Z → A</option>
+        </select>
+    </div>
+</div>
+
+<!-- Order List -->
+<ul id="orderList"></ul>
+    </div>
+
+    <script src="order-management.js"></script>
+</body>
+</html>
